@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    char s;
+    // getline(cin, s);
+
+    int count = 0;
+    int st = 0;
+    int p = 0;
+	while(cin.get(s) && s!='$'){
+
+    // for (int i = 0; s[i] != '$'; i++) {
+        if (isalpha(s)) {
+            count++;
+        }
+        else if (isdigit(s)) {
+            p++;
+        } else if (s==' ' || s=='\t' || s=='\n') {
+            st++;
+        }
+       
+        }
+
+        cout << count << " " << p << " " <<st<<endl;
+
+        return 0;
+}
